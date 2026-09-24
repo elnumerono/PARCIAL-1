@@ -273,5 +273,91 @@ public class Hotel {
         }
         return true;
     }
+    /**
+     * Metodo toString
+     * @return
+     */
+    @Override
+    public String toString() {
+        return "Hotel{" +
+                "nombreComercial='" + nombreComercial + '\'' +
+                ", nit='" + nit + '\'' +
+                ", direccion='" + direccion + '\'' +
+                ", pagWeb='" + pagWeb + '\'' +
+                ", telefono=" + telefono +
+                '}';
+    }
+
+    public String getNombreComercial() {
+        return nombreComercial;
+    }
+
+    public void setNombreComercial(String nombreComercial) {
+        this.nombreComercial = nombreComercial;
+    }
+
+    public String getNit() {
+        return nit;
+    }
+
+    public void setNit(String nit) {
+        this.nit = nit;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public String getPagWeb() {
+        return pagWeb;
+    }
+
+    public void setPagWeb(String pagWeb) {
+        this.pagWeb = pagWeb;
+    }
+
+    public int getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+
+    public List<Servicio> getListHotelServicios() {
+        return listHotelServicios;
+    }
+
+    public void setListHotelServicios(List<Servicio> listHotelServicios) {
+        this.listHotelServicios = listHotelServicios;
+    }
+
+    public List<Huesped> getListHotelHuespedes() {
+        return listHotelHuespedes;
+    }
+
+    public void setListHotelHuespedes(List<Huesped> listHotelHuespedes) {
+        this.listHotelHuespedes = listHotelHuespedes;
+    }
+
+    public List<Habitacion> getListHotelHabitaciones() {
+        return listHotelHabitaciones;
+    }
+
+    public void setListHotelHabitaciones(List<Habitacion> listHotelHabitaciones) {
+        this.listHotelHabitaciones = listHotelHabitaciones;
+    }
+
+    public List<Reserva> getListHotelReservas() {
+        return listHotelReservas;
+    }
+
+    public void setListHotelReservas(List<Reserva> listHotelReservas) {
+        this.listHotelReservas = listHotelReservas;
+    }
 
 }
