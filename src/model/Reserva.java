@@ -39,6 +39,48 @@ public class Reserva {
         this.listReservaHabitaciones = new ArrayList<>();
         this.listReservaServicios = new ArrayList<>();
     }
+
+    /**
+     * Metodo para agregar habitacion
+     * @param h habitacion
+     */
+    public void agregarHabitacion(Habitacion h) {
+        listReservaHabitaciones.add(h);
+    }
+
+    /**
+     * Metodo para agregar servicio
+     * @param s servicio
+     */
+    public void agregarServicio(Servicio s) {
+        listReservaServicios.add(s); // Cada vez que se agrega un servicio, se actualiza el costo acumulado
+        this.valorTotal += s.getPrecio();
+    }
+    /**
+     *Metodo para calcular el valor total
+     * @param numeroNoches del huesped
+     *
+     */
+    public double calcularValorTotal(int numeroNoches) {
+        double costoHabitaciones = 0.0;
+        for (Habitacion h : listReservaHabitaciones) {
+            costoHabitaciones += h.getPrecioPorNoche() * numeroNoches;
+        }
+
+        double costoServicios = 0.0;
+        for (Servicio s : listReservaServicios) {
+            costoServicios += s.getPrecio();
+        }
+        double subtotal = costoHabitaciones + costoServicios;
+
+        if (huesped != null && huesped.getListHuespedReservas().size() > 1) {
+            subtotal = subtotal * 0.50;
+        }
+
+        this.valorTotal = costoHabitaciones + costoServicios;
+        return this.valorTotal;
+    }
+
     /**
      * Metodo toString
      * @return
