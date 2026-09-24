@@ -39,4 +39,100 @@ public class Reserva {
         this.listReservaHabitaciones = new ArrayList<>();
         this.listReservaServicios = new ArrayList<>();
     }
+    /**
+     * Metodo toString
+     * @return
+     */
+    @Override
+    public String toString() {
+        return "Reserva{" +
+                "codigoReserva='" + codigoReserva + '\'' +
+                ", fechaRealizacion='" + fechaRealizacion + '\'' +
+                ", fechaEntrada='" + fechaEntrada + '\'' +
+                ", fechaSalida='" + fechaSalida + '\'' +
+                ", estado='" + estado + '\'' +
+                ", metodoPago='" + metodoPago + '\'' +
+                ", valorTotal=" + valorTotal +
+                '}';
+    }
+
+    public String getCodigoReserva() {
+        return codigoReserva;
+    }
+
+    public void setCodigoReserva(String codigoReserva) {
+        this.codigoReserva = codigoReserva;
+    }
+
+    public String getFechaRealizacion() {
+        return fechaRealizacion;
+    }
+
+    public void setFechaRealizacion(String fechaRealizacion) {
+        this.fechaRealizacion = fechaRealizacion;
+    }
+
+    public String getFechaEntrada() {
+        return fechaEntrada;
+    }
+
+    public void setFechaEntrada(String fechaEntrada) {
+        this.fechaEntrada = fechaEntrada;
+    }
+
+    public String getFechaSalida() {
+        return fechaSalida;
+    }
+
+    public void setFechaSalida(String fechaSalida) {
+        this.fechaSalida = fechaSalida;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String getMetodoPago() {
+        return metodoPago;
+    }
+
+    public void setMetodoPago(String metodoPago) {
+        this.metodoPago = metodoPago;
+    }
+
+    public double getValorTotal() {
+        return valorTotal;
+    }
+
+    public void setValorTotal(double valorTotal) {
+        this.valorTotal = valorTotal;
+    }
+
+    public List<Habitacion> getListReservaHabitaciones() {
+        return listReservaHabitaciones;
+    }
+
+    public void setListReservaHabitaciones(List<Habitacion> listReservaHabitaciones) {
+        this.listReservaHabitaciones = listReservaHabitaciones;
+    }
+
+    public List<Servicio> getListReservaServicios() {
+        return listReservaServicios;
+    }
+
+    public void setListReservaServicios(List<Servicio> listReservaServicios) {
+        this.listReservaServicios = listReservaServicios;
+    }
+
+    public Huesped getHuesped() {
+        return huesped;
+    }
+
+    public void setHuesped(Huesped huesped) {
+        this.huesped = huesped;
+    }
 }
