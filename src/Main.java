@@ -6,10 +6,11 @@ import model.Reserva;
 import model.Servicio;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         Hotel hotel = new Hotel("StayPlus", "900.123.456-7",
                 "Cr 14 #14-50", "StayPlus.com", 355421456);
+
         int opcion = 0;
         while (opcion != 9) {
             String lecturaOpcion = JOptionPane.showInputDialog(null, """
@@ -26,7 +27,7 @@ public class Main {
                     Seleccione una opción:
                     """);
 
-            if (lecturaOpcion != null && !lecturaOpcion.isEmpty()) {
+            if (lecturaOpcion != null && !lecturaOpcion.equals("")) {
                 opcion = Integer.parseInt(lecturaOpcion);
             } else {
                 opcion = 9; // Si cierra la ventana, sale del ciclo
@@ -145,7 +146,7 @@ public class Main {
                     JOptionPane.showMessageDialog(null, "El huésped no existe. Debe registrarlo primero.");
                 }
 
-            }else if (opcion == 5) {
+            } else if (opcion == 5) {
                 String codRes = JOptionPane.showInputDialog("Ingrese el código de la reserva:");
                 Reserva res = hotel.buscarReserva(codRes);
 
@@ -190,5 +191,4 @@ public class Main {
             }
         }
     }
-
 }
