@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
 
         Hotel hotel = new Hotel("StayPlus", "900.123.456-7",
-                "Cr 14 #14-50", "StayPlus.com", 355421456);
+                "Cr 14 #14-50", "StayPlus.com", 3554214565);
 
         int opcion = 0;
         while (opcion != 9) {
